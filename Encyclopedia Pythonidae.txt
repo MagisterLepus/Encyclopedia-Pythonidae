@@ -1,0 +1,336 @@
+-----------
+|FUNCTIONS|
+-----------
+Summary: Functions are blocks of code that only run when they are called. You can pass parameters, into functions, which can return data as a result. Functions are generally created via the def keyword.
+
+dict = {'key':value} or x = dict('key':value)
+Creates a list of key:value pairs that are bound, effectively defining what a dictionary is syntactically. Keys and values can be either strings, integers, or floats. 
+
+dir(object)
+Returns all properties and methods of specified objects, without values. For a module, returns module attributes. For class, returns class attributes and recursively the attirbutes of its bases. For other objects, returns attributes, its class attributes, and recursively attributes of its class's base classes.
+
+len(object)
+Returns the number of characters in a string, keys in a dictionary, or values in a list or tuple.
+
+list = [] or x = list()
+Creates a list of values. Strings should be in format 'string'. The constructor list() should be used when changing type of array, but is otherwise obsolete in creation of lists as list = [] is simpler and direct.
+
+open('file', 'mode')
+Opens a file and returns it as a file object that can be read or interacted with. File refers to the full path of the file. Modes can be r (read only, error if file doesn't exist), a (allows appending, creates file if it doesn't exist), w (allows writing which overwrites existing content, creates file if it doesn't exist), x (creates specified file, error if file exists).
+
+ord('')
+Stands for 'ordinal.' Returns the ASCII value of designated character. In Python, all strings are unicode.
+
+max(n1, n2, ...) or max(iterable)
+Returns the maximum value of the comparable items or a previously established iterable. For strings, Z > A and lower case > upper case.
+
+min(n1, n2, ...) or min(iterable)
+Returns the minimum value of the comparable items or a previously established iterable. For strings, Z > A and lower case > upper case.
+
+range(start, stop, step)
+Creates number sequence with start value, stop value, and ivalue for incrementing known as 'step'. Default start value is 0, default step is 1.
+
+sorted(iterable, key='', reverse=)
+Returns sorted list from the specified iterable array that contains only one type (string OR number). Strings sorted alphabetically, numbers sorted numerically. orts tuples by comparing first value only. Sorting is in ascending order by default, where reverse is inherently equal to False. If reverse=True, sorts in descending order. Key specifies a sorting function, default is None.
+
+sum(iterable, start)
+Returns a number that is the sum of all items in an iterable. Start defines a value added to the return value.
+
+zip(iterator1, iterator2, iterator3, ...)
+Creates a list of paired tuples from the position of each iterator. If there is a difference in length between iterators, the shortest one determines the length of the zipped list.
+
+-----------
+|OPERATORS|
+-----------
+Summary: Operators are used to perform operations on variables and values. There are 7 groups of operators: arithmetic, assignment, comparison, logical, identity, membership, and bitwise.
+
+~~~~~~~~~~
+Arithmetic - used with numeric values to perform common mathematical operations.
+~~~~~~~~~~
+Addition: x + y
+Subtraction: x - y
+Multiplication: x * y
+Division: x / y
+Modulus: x % y (returns remainder after division)
+Exponentiation: x ** y
+Floor division: x // y (returns value without remainder, ie, floor of the number)
+
+~~~~~~~~~~
+Assignment - used to assign values to variables.
+~~~~~~~~~~
+In the format of x= where x is an arithmetic operator, the assignment operator = assigns the new value of the variable after the defined arithmetic operation.
+
+&=: x & 3
+~~~~~~~~~~
+Comparison
+~~~~~~~~~~
+~~~~~~~
+Logical
+~~~~~~~
+~~~~~~~~
+Identity
+~~~~~~~~
+~~~~~~~~~~
+Membership
+~~~~~~~~~~
+~~~~~~~
+Bitwise
+~~~~~~~
+& AND
+| OR
+^ XOR
+~ NOT
+<< Shift left by pushing zeroes in from the right and let the leftmost bits fall off
+>> Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+
+in
+not in
+
+
+
+
+
+---------
+|METHODS|
+---------
+Methods are
+
+Methods are presented in the following manner: 
+	.method(parameters) | Class
+	definition and details
+
+.lower()
+.find()
+.strip()
+.rstrip()
+.startswith()
+.read()
+.append()
+.sort()
+
+.split(delimiter,maxsplit) | String |
+Returns a list from a string by splitting it at the designated delimiter, default set to a space. Maxsplit specifies the number of linear splits, default set to -1 (all occurences).
+
+.get(ket,default) | Dictionary
+This method looks up key in a dictionary and returns default value if it does not exist. Avoids tracebacks.
+
+.keys()
+.values()
+.items()
+
+string.encode(encoding='', errors='') | String
+Encodes the string with the designated encoding. Common types are ASCII, Unicode, UTF-8 (default), UTF-16. Errors designates what to replace the unencoded problem characters with. Options are 'backslashreplace' (replaces with a backslash), 'ignore' (skips over character), 'namereplace' (replaces with text explaining character, 'strict' (default, raises an error), 'replace' (replaces character with question mark), 'xmlcharrefreplace' (replaces character with an xml character).
+
+
+
+----------
+|KEYWORDS|
+----------
+Keywords are words that are reserved by Python. They should never be used in any manner other than as they are defined. Since keywords represents functions, statements, etc, they should not be used as variables or names.
+
+Keyowrds are presented in the following manner:
+	keyword | usage examples
+	definition and details
+
+----------------------------------------------------------------------------------------------------
+
+True
+False
+None
+and
+
+as | import numpy as np | from matplotlib import pyplot as plot | with open('sample.txt') as book | except RandomPrintStatement as em
+Binds a word that calls upon another function or variable.
+
+assert
+
+break |
+Terminates current loop (for, while) and resumes execution at the next statement. Simply, it starts the loop at the next iterable.
+
+of
+class
+
+if
+
+def |def('name')
+Defines(creates) a function block.  
+
+del
+elif
+else
+except
+return 
+for
+from
+try
+global
+
+import
+When used in the following manner: from random import randint
+ |
+(!) import vs from import - Both load the entire module. Import names a global variable which is then used to call upon individual variables from the module. From import names a variable bound to a specific variable from the module.
+
+in | 5 in (1,2,5)
+Checks to see if target exists as an element in specific array and returns T/F. 
+
+is
+lambdas
+while
+not
+
+or |
+
+pass
+raise
+finally
+continue
+nonlocal
+with
+yield
+
+---------
+|MODULES|
+---------
+
+Modules are presents in the following manner:
+	Module name | Summary
+	Module.function(parameters) - usage and description
+
+os | Portable way of using operating system dependent functionality.
+
+os.remove('filepath') - Deletes the file at 'filepath'.
+os.rmdir('dirpath') - Deletes the directory at 'dirpath'.
+os.path.exists('filepath') - Checks to see if 'filepath' exists. Returns T/F.
+
+
+socket | Allows network connection.
+
+socket.connect('hostname', port) - Connects to the 'hostname' at the designated port.
+socket.close() - Closes the connection.
+str.encode(encoding='', errors='') - Encodes to bytes. Must be string. Default encoding is utf-8, default errors are strict.
+bytes.decode(encoding='', errors='') - Decodes from bytes. Default encoding is utf-8, default errors are strict.
+send() - Send.
+recv() - Receive.
+recv() - Receive.
+
+
+urllib | Library that performs socket work and makes web pages look like a file.
+
+urllib.request
+urllib.parse
+urllib.error
+urllib.urlopen
+
+-------------
+|TERMINOLOGY|
+-------------
+
+Generator
+A generator function declares a function that behaves like an iterator, but instead returns an object via the 'yield' command. The advantage of a generator is that it can be used like an iterator, but it doesn't hold the entire list/set/dictionary in memory. Instead, it yields a single object that is the result of the expression it has been run through. This means it has negligable change in memory usage and is 10^6 times faster to compute.
+
+Algorithm
+
+Parameter
+
+Object
+
+String
+
+Statement
+Synctactic unit that expresses an action to be carried out. A program is a sequence of one or more statements. 
+
+Definition/declaration
+Expression
+Synctactic entity that may be evaluated to determine its value. It is a combination of constants, variables, functions, and operators. Returns a result.
+
+Data Structure
+
+Hypertext Transfer Protocol (HTTP)
+Protocol for data retrieval at the application layer.
+
+Socket
+Network sockets serve as endpoints for sending and receiving data across a network. They are a software structure within a network node. Commonly, socket 80 refers to a web server. Socket structure and function is defined by APIs.
+
+Application Programming Interface (API)
+A computing interface that defines interactions between multiple software intermediaries. Defines the type of call and request made, how to make one, the data formats used, conventions to follow, and more. 
+
+Interface
+Shared boundary across two or more separate components of a computer system that allows information exchange, be it hardware, software, peripheral, or human. 
+
+
+Parameter
+Variable listed inside the parentheses in the function definition.
+
+Argument
+Value sent to the function when it is called.
+
+DATA ARRAY
+An array is a data structure which can store a fixed-size collection of elements of the same data type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type. There are four types of arrays in Python: list, tuple, set, and dictionary.
+
+	Tuple = ()| Can assign variables simultaneously provided the number of values is the same as the number of assignable variables. Comparison operators stop at the first True statement, and for strings, they compare if string matches exactly.
+	Properties: Ordered, immutable, allows duplicates.
+
+	List = [] | 
+	Properties: Ordered, mutable, allows duplicates.
+
+	Set = () | 
+	Properties: Unordered, unindexed, no duplicates.
+
+	Dictionary = {} | 
+	Properties: Unordered, mutable, no duplicate keys.
+
+
+
+
+---------------------
+|REGULAR EXPRESSIONS|
+---------------------
+Regular expressions use specific metacharacters with the defined functions in order to streamline and enhance string matching. I hate them, they suck, but they have their use. See link for additional help, although no single place explains them well. Can be added via 'import re'.
+https://docs.python.org/3/howto/regex.html
+
+
+~~~~~~~~~
+Functions
+~~~~~~~~~
+.findall(regex, string)
+Returns a list containing all matches, extracted from string, determined by regex input.
+
+.search(regex, string)
+Returns a Match object if there is a match anywhere in the string. The Match object is of class Match, and has a span (start and end of match) and the desired Match value.
+
+.split(regex, string, maxsplit)
+Returns a match where the string has been split at each match. Maxsplit determines maximum number of splits, default set to all.
+
+.sub(regex, target, string, count)
+Replaces one or many matches in a string with the target. The count determines how many replacements with default set to all.
+
+~~~~~~~~~~~~~~
+Metacharacters
+~~~~~~~~~~~~~~
+Matching typically finds the largest string that satisfies the requirements. 
+
+[a-z] Defines range for set of alphanumeric characters.
+. Matches any character.
+^ Matches beginning of string. Inside a range, it is read as 'find character NOT listed in the range'.
+$ Matches end of string.
+* Matches all occurences. Equivalent to {0,}.
++ Matches one or more occurences. Equivalent to {1,}.
+? Matches up to one occurence. Equivalent to {0,1}.
+{x,y} Matches exactly the specified number of occurences for one value, or at least x, and at most y repetitions.
+
+\ Used to signal the start or end of a special sequence or special character. When placed in front of a metacharacter, it will ignore its property and use it simply as a character. 
+
+| either or
+() capture and group
+
+special sequences
+\A returns match if specified characters are at beginning of string
+\b returns match where specified characters are at beginning or end of string
+\B
+\d Matches any digit, equivalent to [0-9].
+\D Matches any non-digit, equivalent to [^0-9].
+\s Matches any whitespace character, equivalent to [^ \t\n\r\f\v].
+\S Matches any non-whitespace character, equivalent to [ \t\n\r\f\v].
+\w Matches any alphanumeric character, equivalent to [a-zA-z0-9_].
+\W Matches any non-alphanumeric character, equivalent to [^a-zA-z0-9_].
+\Z
